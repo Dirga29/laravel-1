@@ -6,7 +6,6 @@
     <title>Halaman Home</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Previous styles remain the same... */
         * {
             margin: 0;
             padding: 0;
@@ -18,6 +17,7 @@
             background-color: #f8f9fa;
             line-height: 1.6;
             color: #333;
+            padding-top: 70px; /* To offset the fixed navbar */
         }
 
         /* Navbar styling */
@@ -62,7 +62,7 @@
             color: #ffd700;
         }
 
-        /* Profile dropdown styling - Updated for click interaction */
+        /* Profile dropdown styling */
         .profile-section {
             margin-left: auto;
             position: relative;
@@ -134,33 +134,75 @@
             margin: 5px 0;
         }
 
-        /* Rest of your existing styles... */
-        /* (Keep all other styles the same) */
+        /* Additional styling for Home page content */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .welcome-text {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            text-align: center;
+            width: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 14px;
+        }
 
         @media (max-width: 768px) {
-            nav ul {
-                flex-wrap: wrap;
+            .feature-list {
+                flex-direction: column;
+                align-items: center;
             }
-            
-            nav ul li {
-                margin: 5px 15px;
-            }
-
-            .profile-section {
-                margin: 10px auto;
-            }
-
-            .dropdown-menu {
-                position: fixed;
-                width: 100%;
-                left: 0;
-                right: 0;
-                border-radius: 0;
+            .feature-item {
+                width: 80%;
+                margin-bottom: 20px;
             }
         }
+
     </style>
 </head>
 <body>
+
     <!-- Navbar -->
     <nav>
         <ul>
@@ -182,8 +224,29 @@
         </ul>
     </nav>
 
-    <!-- Rest of your HTML content remains the same... -->
-    <!-- (Keep all other HTML content the same) -->
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="section-title">Selamat Datang di Halaman Utama!</h1>
+        <p class="welcome-text">Ini adalah halaman depan situs kami. Anda dapat menjelajahi berbagai fitur dan layanan yang kami tawarkan.</p>
+
+        <div class="feature-list">
+            <div class="feature-item">
+                <i class="fas fa-cogs"></i>
+                <h3>Fitur 1</h3>
+                <p>Deskripsi fitur pertama yang sangat berguna untuk Anda.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-users"></i>
+                <h3>Fitur 2</h3>
+                <p>Deskripsi fitur kedua yang memungkinkan Anda untuk terhubung dengan lebih banyak orang.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-rocket"></i>
+                <h3>Fitur 3</h3>
+                <p>Deskripsi fitur ketiga yang memberikan peningkatan performa dalam setiap penggunaan.</p>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Profile dropdown functionality
